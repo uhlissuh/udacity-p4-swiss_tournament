@@ -27,7 +27,8 @@ CREATE VIEW win_counts as
 SELECT players.id, count(matches.winner) as wins
 from players left join matches
 on players.id = matches.winner
-group by players.id;
+group by players.id
+order by wins desc;
 
 CREATE VIEW loss_counts as
 SELECT players.id, count(matches.loser) as losses

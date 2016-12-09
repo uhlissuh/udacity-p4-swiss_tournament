@@ -5,6 +5,9 @@ DROP DATABASE tournament;
 
 CREATE DATABASE tournament;
 
+--connect to database
+\c tournament
+
 --keeps track of all players in tournament
 CREATE TABLE players
   (
